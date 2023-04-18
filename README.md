@@ -11,9 +11,9 @@ Here is a fun python program that needs your help. It is supposed to check if a 
 Let the experimenter know once you have completed the setup. Now, we will begin our task.
 
 ## The checkpoints of your developer journey in this repository: here are your subtasks:
-- Create and checkout your own git branch `Participant-ID-fix` to get started. Remove code smells from the code. Your goal is to find out what code smells are, where it occured, and how you can fix it?
-- Fix the code (the functions) now such that all the test cases pass.
-- Commit your changes and raise a Pull Request (PR). Your goal is to find out what PRs are and how you can do it?
+- Create and checkout your own git branch `Participant-ID-fix` to get started. Now in your branch, remove code smells from the code. Your goal is to find out what code smells are, where it occured, and how you can fix it?
+- Next, fix the code (the functions) now such that all the test cases pass.
+- Finally, commit your changes and raise a Pull Request (PR). Your goal is to find out what PRs are and how you can do it?
 <!-- - There is merge conflict on one of the branches named `experimenter-help`. Your goal is to find out what merge conflicts are, why it occured here, and how you can fix it? -->
 
 At each checkpoint, the experimenter may prompt you for having a short discussion.
