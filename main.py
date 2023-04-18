@@ -55,8 +55,8 @@ def check_weather():
         print(err)
 
 
-if __name__ == "__main__":
 
+def main():
     try: # Check the pallindrome function
         if check_pallindrome(pallin_num) == False or check_pallindrome(non_pallin_num) == True:
             raise Exception
@@ -78,3 +78,6 @@ if __name__ == "__main__":
     except Exception as err:
         print("Test case 3 failed.")
         print(err)
+
+if __name__=="__main__":
+    main()
