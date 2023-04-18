@@ -7,7 +7,6 @@ n = NOAA()
 link = 'https://www.google.com'
 pallin_num = 112211
 non_pallin_num = 12345
-c = 0
 
 # Test Functions
 def check_pallindrome(num):
@@ -48,7 +47,12 @@ def check_webpage(link: str) -> None:
 def check_weather():
     lat = 40.7314
     lon = -73.8656
-    forecasts = n.get_forecasts(coordinates=(lat, lon))
+    try:
+        forecasts = n.get_forecasts(coordinates=(lat, lon))
+        print("Test 2 passed")
+    except Exception as err:
+        print("Test 2 failed")
+        print(err)
 
 
 if __name__ == "__main__":
@@ -58,24 +62,19 @@ if __name__ == "__main__":
             raise Exception
         else:
             print("Test 1 passed.")
-            c+=1
     except Exception as err:
         print("Test case 1 failed. Please correct the pallindrome function")
         print(err)
 
     try: # Check the weather function
         check_weather()
-        c+=1
-        print("Test case 2 passed.")
     except Exception as err:
         print("Test case 2 failed.")
         print(err)
 
     try: # Check the webpage function
         check_webpage(link)
-        c+=1
         print("Test case 3 passed.")
     except Exception as err:
         print("Test case 3 failed.")
         print(err)
-    print(f"Total {c}/3 tests passed")
