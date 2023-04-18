@@ -1,40 +1,44 @@
-# Username: Fragnance
+# Username: bob-the-builder
 import os
 from selenium.webdriver.chrome.webdriver import WebDriver
 from noaa_sdk import NOAA
+from selenium import webdriver
+
 
 # Test Functions
 def is_palindrome(num):
     num = str(num)
     return num == num[::-1]
 
-def scrape_webpage(link: str, wait_time) -> None:
-    # Initialize Chrome WebDriver
-    driver: WebDriver = WebDriver()
-    # Navigate to webpage
-    driver.get(link)
-
-    # Wait for page to load and all elements to become visible
-    driver.implicitly_wait(wait_time)
-    # Get all visible elements on the page
-    visible_elements = driver.find_elements_by_css_selector("*:not([style*='display:none']):not([style*='display: none'])")
-    # Save visible elements to an HTML file
-    with open("visible_elements.html", "w", encoding="utf-8") as file:
-        file.write("<html><body>")
-        for element in visible_elements:
-            file.write(element.get_attribute("outerHTML"))
-        file.write("</body></html>")
-    # Close the WebDriver
-    driver.quit()
-
-
 # Using the NOAA-SDK in python
 def check_weather():
     noaa_object = NOAA()
     lat = 40.7314
     lon = -73.8656
-    forecasts = noaa_object.get_forecasts(coordinates=(lat, lon))
+    forecasts = noaa_object.points_forecast(lat, lon, type='forecastGridData')
 
+def scrape_webpage(link: str, wait_time) -> None:
+    # Initialize Chrome WebDriver
+    driver = webdriver.Chrome()
+
+    # Navigate to webpage
+    driver.get('https://www.google.com')
+
+    # Wait for page to load and all elements to become visible
+    driver.implicitly_wait(10)
+
+    # Get all visible elements on the page
+    visible_elements = driver.execute_script("return Array.from(document.querySelectorAll('*')).filter(e => e.offsetWidth || e.offsetHeight || e.getClientRects().length);")
+
+    # Save visible elements to an HTML file
+    with open('visible_elements.html', 'w', encoding='utf-8') as file:
+        file.write('<html><body>')
+        for element in visible_elements:
+            file.write(driver.execute_script("return arguments[0].outerHTML;", element))
+        file.write('</body></html>')
+
+    # Close the WebDriver
+    driver.quit()
 
 if __name__ == "__main__":
     # Test the is_palindrome function
