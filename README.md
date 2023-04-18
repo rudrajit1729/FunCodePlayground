@@ -8,6 +8,8 @@ Here is a fun python program that needs your help. It is supposed to check if a 
 - Install these dependencies first, `pip3 install -r requirements.txt`.
 - Try running the code `python main.py`, it will pass 0 of 3 test cases. 
 
+Let the experimenter know once you have completed the setup. Now, we will begin our task.
+
 ## The checkpoints of your developer journey in this repository: here are your subtasks:
 - Create your own git branch to get started. Remove code smells from the code. Your goal is to find out what code smells are, where it occured, and how you can fix it?
 - Fix the code (the functions) now such that all the test cases pass.
