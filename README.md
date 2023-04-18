@@ -3,8 +3,8 @@
 Here is a fun python program that needs your help. It is supposed to check if a number is palindrome, fetch the weather like a  meterologist, and scrape webpages like a pro.
 
 ## Here is a quick guide:
-
 - Fork the repository and clone on your system.
+- Set up your Git using SSH (if you haven't already). If you like, you can make a dummy commit in the readme file by adding today's date.
 - Install these dependencies first, `pip3 install -r requirements.txt`.
 - Try running the code, it will pass 0 of 3 test cases. 
 
