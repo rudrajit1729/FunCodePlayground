@@ -13,7 +13,7 @@ Here is a fun python program that needs your help. It is supposed to check if a 
 - Remove code smells from the code. Your goal is to find out what code smells are, where it occured, and how you can fix it?
 - Fix the code (the functions) now such that all the test cases pass.
 - Commit your changes and raise a Pull Request (PR). Your goal is to find out what PRs are and how you can do it?
-- There is merge conflict on one of the branches named `experimenter-help`. Your goal is to find out what merge conflicts are, why it occured here, and how you can fix it?
+<!-- - There is merge conflict on one of the branches named `experimenter-help`. Your goal is to find out what merge conflicts are, why it occured here, and how you can fix it? -->
 
 At each checkpoint, the experimenter may prompt you for having a short discussion.
 
@@ -24,4 +24,4 @@ At each checkpoint, the experimenter may prompt you for having a short discussio
   - help with weather forecasting! Use the NOAA-SDK python library to retrieve up-to-date weather data for any location, making it an expert weather guru.
   - help with web scraping, where it can crawl through a webpage and save all the visible elements to an HTML file, like a magpie collecting shiny objects.
 - Raising a PR to include your contribution
-- Resolving the conflict in 'experimenter-help' so that it is merge ready.
+<!-- - Resolving the conflict in 'experimenter-help' so that it is merge ready. -->
