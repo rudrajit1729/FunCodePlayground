@@ -9,6 +9,13 @@ pallin_num = 112211
 non_pallin_num = 12345
 
 # Test Functions
+# def check_dir(path):
+    # # Create directory to save the file
+    # path: str = os.getcwd()
+    # parent_path: str = os.path.abspath(os.path.join(path, os.pardir))
+    # out_dir_path: str = os.path.join(parent_path, "HTML_output")
+    # os.makedirs(out_dir_path)
+
 def check_pallindrome(num):
     num = str(num)
     num_copy = num
@@ -22,12 +29,6 @@ def check_webpage(link: str) -> None:
     driver: WebDriver = WebDriver()
     # Navigate to webpage
     driver.get(link)
-
-    # # Create directory to save the file
-    # path: str = os.getcwd()
-    # parent_path: str = os.path.abspath(os.path.join(path, os.pardir))
-    # out_dir_path: str = os.path.join(parent_path, "HTML_output")
-    # os.makedirs(out_dir_path)
     
     # Wait for page to load and all elements to become visible
     driver.implicitly_wait(10)
