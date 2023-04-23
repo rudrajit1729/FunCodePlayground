@@ -22,6 +22,7 @@ Let the experimenter know once you have completed the setup. Now, we will begin 
 <!-- - There is merge conflict on one of the branches named `experimenter-help`. Your goal is to find out what merge conflicts are, why it occured here, and how you can fix it? -->
 
 At each checkpoint, the experimenter may prompt you for having a short discussion.
+[Note: The duration for task completion is around 1 hour 15 minutes. The experimenter will be providing assistance in monitoring the duration of the task and will prompt you when you approach different time limits.]
 
 ## Essentially you will be helping the experimenters by:
 - Fixing the functionalities
