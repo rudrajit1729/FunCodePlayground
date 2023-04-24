@@ -44,7 +44,7 @@ def check_webpage(link: str) -> None:
     driver.quit()
 
 
-# Using the NOAA-SDK in python
+# Using the NOAA-SDK in python. Use the lat and lon to get forecast for a specific location.
 def check_weather():
     lat = 40.7314
     lon = -73.8656
