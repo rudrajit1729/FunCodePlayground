@@ -1,22 +1,9 @@
 import os
 from selenium.webdriver.chrome.webdriver import WebDriver
-from noaa_sdk import NOAA # NOAA-SDK python
-
-# Global Variables
-n = NOAA()
-link = 'https://www.google.com'
-pallin_num = 112211
-non_pallin_num = 12345
-
-# Test Functions
-# def check_dir(path):
-    # # Create directory to save the file
-    # path: str = os.getcwd()
-    # parent_path: str = os.path.abspath(os.path.join(path, os.pardir))
-    # out_dir_path: str = os.path.join(parent_path, "HTML_output")
-    # os.makedirs(out_dir_path)
+from noaa_sdk import NOAA
 
 def check_pallindrome(num):
+    """Check if a given number is a palindrome."""
     num = str(num)
     num_copy = num
     num = num[::-1]
@@ -24,10 +11,10 @@ def check_pallindrome(num):
         return True
     return False
 
-
-def check_webpage(link: str) -> None:
+def check_webpage(link):
+    """Check if all elements on a given webpage are visible."""
     # Initialize Chrome WebDriver
-    driver: WebDriver = WebDriver()
+    driver = WebDriver()
     # Navigate to webpage
     driver.get(link)
     
@@ -44,44 +31,46 @@ def check_webpage(link: str) -> None:
     # Close the WebDriver
     driver.quit()
 
-
-# Using the NOAA-SDK in python. Use the lat and lon to get forecast for a specific location.
-def check_weather():
-    lat = 40.71
-    lon = 70.8656
+def check_weather(lat, lon):
+    """Get weather forecasts for a given location using the NOAA API."""
+    n = NOAA()
     location = (lat, lon)
     try:
-        forecasts = n.points_forecast(lat, lon, type='forecastGridData')
-        print("Test 2 passed")
-        
+        forecasts = n.get_forecasts(locpoints_forecast(40.7314, -73.8656, type='forecastGridData')
+        print("Test case 2 passed")
     except Exception as err:
-                print("Test 2 failed")
-                print(err)
+        print("Test case 2 failed")
+        print(err)
 
-
-
-def main():
-    try: # Check the pallindrome function
+def run_tests():
+    """Run tests on the check_pallindrome, check_webpage, and check_weather functions."""
+    pallin_num = 112211
+    non_pallin_num = 12345
+    link = 'https://www.google.com'
+    lat = 40.7314
+    lon = -73.8656
+    
+    try:
         if check_pallindrome(pallin_num) == False or check_pallindrome(non_pallin_num) == True:
             raise Exception
         else:
-            print("Test 1 passed.")
+            print("Test case 1 passed.")
     except Exception as err:
         print("Test case 1 failed. Please correct the pallindrome function")
         print(err)
 
-    try: # Check the weather function
-        check_weather()
-    except Exception as err:
-        print("Test case 2 failed.")
-        print(err)
-
-    try: # Check the webpage function
+    try:
         check_webpage(link)
         print("Test case 3 passed.")
     except Exception as err:
         print("Test case 3 failed.")
         print(err)
 
+    try:
+        check_weather(lat, lon)
+    except Exception as err:
+        print("Test case 2 failed.")
+        print(err)
+
 if __name__=="__main__":
-    main()
+    run_tests()
