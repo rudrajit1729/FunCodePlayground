@@ -1,6 +1,6 @@
 # Fun Code Playground
 
-Dive into an exciting project where you'll enhance a Python program that detects palindromes, gathers weather info, and scrapes webpages! As a begineer in software engineering, try tackling these diverse challenges: try making sense of the code, fix the functionalities and coding style, and finally contribute your changes. Enjoy the process!
+Dive into this fun project where you'll enhance a Python program that detects palindromes, gathers weather information, and scrapes webpages! As a begineer in software engineering, try tackling these diverse challenges: making sense of the code, fixing the functionalities and coding style, and finally contributing your changes. Enjoy the process!
 
 ## Environment Setup
 - Check if you can access `pip` and `git` from your terminal. 
