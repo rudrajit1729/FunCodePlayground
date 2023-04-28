@@ -14,21 +14,21 @@ Now that you are setup, here are your tasks. Let the experimenter know before an
 - Create and checkout your own git branch named `Participant-ID-fix` to get started.
 - Now in your branch, fix the code (the functions) such that all the test cases pass. [Do not augment the `main()` method]
 
-You will have 20 minutes to solve this task. Once done, let the experimenter know before proceeding to the next task.
+You will have **20 minutes** to solve this task. Once done, let the experimenter know before proceeding to the next task.
 
 ## Task 2: Removing code smells
 - Remove code smells from the code. Your goal is to find out:
   - What code smells are and where it occured in the code.
   - Once identified, now fix the code such that it no longer has code smells. [You may augment the `main()` method]
 
-You will have 15 minutes to solve this task. Once done, let the experimenter know before proceeding to the next task.
+You will have **15 minutes** to solve this task. Once done, let the experimenter know before proceeding to the next task.
 
 ## Task 3: Contributing your changes
 - Commit your changes and open a Pull Request (PR) on GitHub. 
   - First commit all changes to your branch.
   - Next, open a PR from your branch to the main branch of **your own forked repository**
   
-You will have 10 minutes to solve this task. Once done, let the experimenter know.
+You will have **10 minutes** to solve this task. Once done, let the experimenter know.
 
 <!-- Your goal is to find out what commits and PRs are and how you can do it? [Note: You need to open PR from your branch to the main branch of your own forked repository.] - Set up your Git using SSH (if not already) if you want to commit using the terminal. -->
 <!--   - [Link for setting up SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) -->
