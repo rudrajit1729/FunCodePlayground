@@ -21,7 +21,7 @@ You will have **20 minutes** to solve this task. Once done, let the experimenter
   - What code smells are and where it occured in the code.
   - Once identified, now fix the code such that it no longer has code smells. [You may augment the `main()` method]
 
-You will have **15 minutes** to solve this task. Once done, let the experimenter know before proceeding to the next task.
+You will have **10 minutes** to solve this task. Once done, let the experimenter know before proceeding to the next task.
 
 ## Task 3: Contributing your changes
 - Commit your changes and open a Pull Request (PR) on GitHub. 
